@@ -18,23 +18,6 @@ var=$(curl -i -s -H "$header" https://i.instagram.com/api/v1/si/fetch_headers/?c
 var2=$(echo $var | grep -o 'csrftoken=.*' | cut -d ';' -f1 | cut -d '=' -f2)
 ig_sig="4f8732eb9ba7d1c8e8897a75d6474d4eb3f5279137431b2aafb71fafe2abe178"
 
-init()
-
-
-r = Fore.RED
-lg = Fore.GREEN
-rs = Fore.RESET
-w = Fore.WHITE
-grey = '\033[97m'
-cy = Fore.CYAN
-ye = Fore.YELLOW
-colors = [r, lg, w, ye, cy]
-info = lg + '[' + w + 'i' + lg + ']' + rs
-error = lg + '[' + r + '!' + lg + ']' + rs
-success = w + '[' + lg + '*' + w + ']' + rs
-INPUT = lg + '[' + cy + '~' + lg + ']' + rs
-plus = w + '[' + lg + '+' + w + ']' + rs
-minus = w + '[' + lg + '-' + w + ']' + rs
 
 def banner():
     # fancy logo
